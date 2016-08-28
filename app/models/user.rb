@@ -1,4 +1,6 @@
 class User < ActiveRecord::Base
+  
+  has_many :transactions
     
   validates :username, presence: true,
   uniqueness: { case_sensitive: false },
